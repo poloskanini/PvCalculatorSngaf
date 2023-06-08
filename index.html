@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pv Calculator</title>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="wrapper mt-5">
+    <img src="images/Logo SNGAF - Syndicat des Navigants du Groupe Air France DEUXIEME VERSION.png" alt="sngaf">
+
+    <h1 class="mb-5 mt-3">Calculateur de PV</h1>
+    <div class="inner">
+      <label for="tempsDeVol">Temps de vol total :</label>
+      <input class="mb-3 fs-4" type="time" id="tempsDeVol" name="tempsDeVol" value="" required>
+      <label for="heuresDeNuit">Nombre d'heures de nuit :</label>
+      <input class="mb-3 fs-4" type="time" id="heuresDeNuit" name="heuresDeNuit" required>
+      <label for="heuresSup10heures">Nombre d'heures > 10 h :</label>
+      <input class="mb-3 fs-4" type="time" id="heuresSup10heures" name="heuresSup10heures" required>
+      <button class="calculer btn btn-primary m-4" type="button">
+        Calculer
+      </button>
+    </div>
+    <h2>Total PV :<h2>
+    <div class="totalPv">0</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
