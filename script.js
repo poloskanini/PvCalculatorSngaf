@@ -4,10 +4,22 @@ const heuresDeNuit = document.getElementById('heuresDeNuit');
 const heuresSup10heures = document.getElementById('heuresSup10heures');
 const calculer = document.querySelector('.calculer');
 const totalPv = document.querySelector('.totalPv');
+const clear = document.getElementById('clear');
+const resetButton = document.querySelector('.reset-button')
+
+// Reseter le calculateur 1
+// resetButton.addEventListener("click", clearCalculator)
+
+// Reseter le calculateur 2
+clear.addEventListener("click", clearCalculator)
+
+function clearCalculator() {
+  location.reload();
+}
 
 const calculate = () => {
 
-  if (tempsDeVol.value === '' || heuresDeNuit.value === '' || heuresSup10heures === '') {
+  if (tempsDeVol.value === '00:00' || heuresDeNuit.value === '00:00' || heuresSup10heures.value === '00:00') {
     alert('Veuillez remplir tous les champs svp')
     return
   }
