@@ -8,10 +8,10 @@ const clear = document.getElementById('clear');
 const resetButton = document.querySelector('.reset-button')
 
 // Reseter le calculateur 1
-// resetButton.addEventListener("click", clearCalculator)
+resetButton.addEventListener("click", clearCalculator)
 
 // Reseter le calculateur 2
-clear.addEventListener("click", clearCalculator)
+// clear.addEventListener("click", clearCalculator)
 
 function clearCalculator() {
   location.reload();
@@ -19,7 +19,7 @@ function clearCalculator() {
 
 const calculate = () => {
 
-  if (tempsDeVol.value === '00:00' || heuresDeNuit.value === '00:00' || heuresSup10heures.value === '00:00') {
+  if (tempsDeVol.value === '00:00' || heuresDeNuit.value === '00:00') {
     alert('Veuillez remplir tous les champs svp')
     return
   }

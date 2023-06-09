@@ -15,45 +15,30 @@
 <body>
 
   <div class="wrapper">
-    <i class="fa-solid fa-arrows-rotate" id="clear"></i>
+    <!-- <i class="fa-solid fa-arrows-rotate" id="clear"></i> -->
     <img class="logo-img" src="images/Logo SNGAF - Syndicat des Navigants du Groupe Air France DEUXIEME VERSION.png" alt="sngaf">
 
     <h1 class="mb-5 mt-3">CALCULATEUR DE PV</h1>
     <div class="inner">
-      <label for="tempsDeVol">Temps de vol total :
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#modaltempsDeVol">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-        </svg>  
-      </label>
+      <label for="tempsDeVol"><strong>Temps de vol total : </strong></label>
       <input class="mb-3 fs-4" type="time" id="tempsDeVol" name="tempsDeVol" value="00:00" required>
-      <label for="heuresDeNuit">Nombre d'heures de nuit :
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#modalheuresDeNuit">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-        </svg> 
-      </label>
+      <label for="heuresDeNuit"><strong>Nombre d'heures de nuit :</strong></label>
       <input class="mb-3 fs-4" type="time" id="heuresDeNuit" name="heuresDeNuit" value="00:00" required>
-      <label for="heuresSup10heures">Nombre d'heures > 10 h :
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#modalheuresSup10heures">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-        </svg> 
-      </label>
+      <label for="heuresSup10heures"><strong>Nombre d'heures > 10 h :</strong></label>
       <input class="mb-3 fs-4" type="time" id="heuresSup10heures" name="heuresSup10heures" value="00:00" required>
 
-      <div class="buttons">
+      <div class="buttons mb-4">
         <button class="calculer btn btn-primary m-4" type="button">
           Calculer
         </button> 
-        <!-- <button type="button" class="btn btn-danger reset-button">
+        <button class="btn btn-danger reset-button" type="button">
           Reset
-        </button> -->
+        </button>
       </div>
 
     </div>
     <h2>Total PV :
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#modalTotalPV">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#modalTotalPV">
         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
       </svg>  
@@ -61,9 +46,10 @@
     <div class="totalPv">0</div>
   </div>
 
+<!--* MODALES -->
 
 <!-- TempsDeVolTotal -->
-<div class="modal fade" id="modaltempsDeVol" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modaltempsDeVol" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -75,15 +61,14 @@
         <i>Méthode de calcul : <br> (Total d'heures de vol + 1h) x 1.07</i>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button> -->
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- modalheuresDeNuit -->
-<div class="modal fade" id="modalheuresDeNuit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modalheuresDeNuit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -95,15 +80,14 @@
         <i>Méthode de calcul : <br> (Total d'heures de nuit x 0.5) x 1.07</i>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button> -->
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- modalheuresSup10heures -->
-<div class="modal fade" id="modalheuresSup10heures" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modalheuresSup10heures" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -120,25 +104,35 @@
         <img src="images/majoration.png" alt="majoration" class="majo-img w-100">
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button> -->
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Total PV -->
 <div class="modal fade" id="modalTotalPV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Total PV :</h1>
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Méthode de calcul Total PV :</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <i>Méthode de calcul : <br> 
-          Temps de vol total + Nombre d'heures de nuit + Nombres d'heures > 10H
-        </i>
+        <i>TOTAL PV = </i> <br><br>
+        <i>(Total d'heures de vol + 1h) x 1.07</i> <br>
+        <strong>+</strong> <br>
+        <i>(Total d'heures de nuit x 0.5) x 1.07</i> <br>
+        <strong>+</strong> <br>
+        <i>0,7 x ( (Total d' heures > 10h x 0,25) + (Total d' heures > 10h x 0.5) + (Total d' heures > 10h x <strong>"MAJO"</strong>)) <br><br>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+          "MAJO" représente la valeur de la majoration pour les vols de plus de 10h dans le tableau ci-dessous : <br></i>
+
+          <img src="images/majoration.png" alt="majoration" class="majo-img w-100">
+        
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button> -->
