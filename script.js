@@ -24,30 +24,26 @@ const calculate = () => {
     return
   }
 
-  let majoration;
+  let majoration = 0;
 
-  if ( (parseFloat(tempsDeVol.value) >= 10.01) && (parseFloat(tempsDeVol.value) <= 11) ) {
+  if ( (parseFloat(tempsDeVol.value) >= 10) && (parseFloat(tempsDeVol.value) < 11) ) {
     majoration = 0.25;
-  } else if ( (parseFloat(tempsDeVol.value) >= 11.01) && (parseFloat(tempsDeVol.value) <= 12) ) {
+  } else if ( (parseFloat(tempsDeVol.value) >= 11) && (parseFloat(tempsDeVol.value) < 12) ) {
     majoration = 0.50;
-  } else if ( (parseFloat(tempsDeVol.value) >= 12.01) && (parseFloat(tempsDeVol.value) <= 13) ) {
+  } else if ( (parseFloat(tempsDeVol.value) >= 12) && (parseFloat(tempsDeVol.value) < 13) ) {
     majoration = 1;
   } else if ( (parseFloat(tempsDeVol.value) >= 13)) {
     majoration = 2;
-  } else {
-    majoration = 0;
   }
+  console.log(majoration)
 
   let firstCase = (parseFloat(tempsDeVol.value) + 1) * 1.07;
-
   let secondCase = (parseFloat(heuresDeNuit.value) * 0.5) * 1.07;
-
   let thirdCase = 0.7 * ((parseFloat(heuresSup10heures.value) * 0.25) + (parseFloat(heuresSup10heures.value) * 0.5) + (parseFloat(heuresSup10heures.value) * majoration))
 
   let total = (firstCase + secondCase + thirdCase);
-  totalPv.innerHTML = total;
   totalPv.innerHTML = total.toFixed(3);
-  console.log(majoration)
+  
 }
 
 // Ecouter le clic du bouton Calculer
