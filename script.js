@@ -7,16 +7,14 @@ const totalPv = document.querySelector('.totalPv');
 const clear = document.getElementById('clear');
 const resetButton = document.querySelector('.reset-button')
 
-// Reseter le calculateur 1
+// Reseter le calculateur
 resetButton.addEventListener("click", clearCalculator)
-
-// Reseter le calculateur 2
-// clear.addEventListener("click", clearCalculator)
 
 function clearCalculator() {
   location.reload();
 }
 
+// Fonction de calcul
 const calculate = () => {
 
   if (tempsDeVol.value === '00:00' || heuresDeNuit.value === '00:00') {
