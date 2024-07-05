@@ -7,8 +7,12 @@
 }
 
 body {
-  background-image: url("images/nicolasbarthes_a_flight_preparation_desk_with_aviators_flight_l_26468c88-f51b-4595-9d38-3680a7aa1b25.png");
+  /* background-image: url("images/desktop1.png"); */
+  /* background-image: url("images/desktop2.png"); */
+  background-image: url("images/desktop3.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 #clear {
@@ -76,7 +80,7 @@ h2 {
 
 .logo-img {
   display: block;
-  width: 200px;
+  width: 160px;
   margin: auto;
 }
 
